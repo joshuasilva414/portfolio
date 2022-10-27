@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <title>Joshua Silva</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Hi, I'm Josh :)</h1>
+        <div class="main">
+            <div class="side-nav">
+                <h2 class="side-nav__item active" id="about-toggle">About</h2>
+                <h2 class="side-nav__item" id="contact-toggle">Contact</h2>
+                <h2 class="side-nav__item" id="portfolio-toggle">Portfolio</h2>
+            </div>
+            <div class="main__content">
+                <div class="content active" id="about">
+                    <img class="pfp" src="src/pfp2.png"/>
+                    <p>
+                        Hello! My name is Joshua Silva. I'm a first-year Computer Science
+                        major at the University of Texas San Antonio. I specialize in 
+                        machine learning and web development.
+                    </p>
+                </div>
+
+                <div class="content" id="contact">
+                    <h1>(512)659-8471</h1>
+                    <div id="socials">
+                        <a href="https://github.com/joshuasilva414" target="_blank"><img src="src/github.png" /></a>
+                        <a href="https://www.linkedin.com/in/joshua-silva-69ba74204/" target="_blank"><img src="src/linkedin.png" /></a>
+                    </div>
+                    <h1>Joshuasilva414@gmail.com</h1>
+                </div>
+
+                <div class="content carousel" id="portfolio">
+                    <div class="active slide">
+                        <div><img src="src/project1example1.png"></div>
+                        <h2>This is a website demonstration of a machine learning model that can classify handwritten digits</h2>
+                        <a href="https://joshuasilva414.github.io/digit-classification-app/index.html" target="_blank">Check it out!</a>
+                    </div>
+
+                    <div class="slide">
+                        <div><img class="invert" src="src/under-construction.png"></div>
+                        <h2>Under Construction</h2>
+                    </div>
+
+                    <div class="slide">
+                        <div><img class="invert" src="src/under-construction.png"></div>
+                        <h2>Under Construction</h2>
+                    </div>
+
+                    <div class="slide">
+                        <div><img class="invert" src="src/under-construction.png"></div>
+                        <h2>Under Construction</h2>
+                    </div>
+
+                    <!-- Buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="tabs.js"></script>
+    <script src="carousel.js"></script>
+    <a style="display:none" href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Freepik - Flaticon</a>
+    <a style="display:none" href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Freepik - Flaticon</a>
+    <a style="display:none" href="https://www.flaticon.com/free-icons/under-construction" title="under construction icons">Under construction icons created by monkik - Flaticon</a>
+</body>
+</html>
