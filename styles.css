@@ -7,6 +7,10 @@ body {
     color: hsl(208, 66%, 90%);
 }
 
+h1 > a {
+    color: hsl(208, 66%, 90%);
+}
+
 p {
     font-size: x-large;
 }
@@ -20,8 +24,8 @@ h1.title {
 }
 
 img.pfp {
-    width: 40%;
-    max-width: 25%;
+    /* width: 40%; */
+    max-width: 30%;
     border-radius: 3px;
 }
 
@@ -82,7 +86,7 @@ img.pfp {
 }
 
 .content#about > p {
-    max-width: 300px;
+    max-width: 500px;
     text-align: center;
 }
 
@@ -93,7 +97,8 @@ img.pfp {
 
 .content.active#about {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5rem;
     align-items: center;
     height: 100%;
 }
@@ -207,6 +212,12 @@ img.pfp {
 .slide.active {
     display: block;
     animation: fadein 0.2s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .content.active#about {
+        flex-direction: column;
+    }
 }
 
 @keyframes fadein {
