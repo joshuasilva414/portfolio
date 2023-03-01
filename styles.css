@@ -13,6 +13,7 @@ h1 > a {
 
 p {
     font-size: x-large;
+    text-align: center;
 }
 
 h1.title {
@@ -172,13 +173,14 @@ img.pfp {
     left: 50%; */
 }
 
-.slide > a {
+.aboutme > a, .slide > a {
     margin: auto;
     display: block;
     width: 100px;
     background-color:hsl(208, 66%, 90%);
     padding: 5px;
     text-decoration: none;
+    text-align: center;
     color:rgb(23, 71, 101);
     border-radius: 3px;
 }
