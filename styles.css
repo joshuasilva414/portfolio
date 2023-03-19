@@ -24,6 +24,7 @@ body {
 	margin: 0;
 	color: var(--clr-primary);
 	background-color: var(--bg-main);
+	background-size: cover;
 	background: 50% 60% no-repeat fixed url("./src/background.avif"), var(--bg-main);
 	background-blend-mode: darken;
 }
