@@ -30,9 +30,8 @@ body {
 	color: var(--clr-primary);
 	background-color: var(--bg-main);
 	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
 	background: 50% 60% no-repeat fixed var(--bg-img), var(--bg-main);
+	background-attachment: fixed;
 	background-blend-mode: darken;
 }
 
