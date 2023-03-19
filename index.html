@@ -1,79 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
-    <title>Joshua Silva</title>
-</head>
-<body>
-    <div class="container">
-        <h1 class="title">Joshua Silva</h1>
-        <div class="main">
-            <div class="side-nav">
-                <h2 class="side-nav__item active" id="about-toggle">About</h2>
-                <h2 class="side-nav__item" id="contact-toggle">Contact</h2>
-                <h2 class="side-nav__item" id="portfolio-toggle">Portfolio</h2>
-            </div>
-            <div class="main__content">
-                <div class="content active" id="about">
-                    <img class="pfp" src="src/pfp3.jpeg"/>
-                    <div class="aboutme">
-                        <p>
-                            Hello! My name is Joshua Silva. I'm a first-year Computer Science 
-                            major at UTSA. I'm driven by my passion for computer science to learn, innovate, 
-                            and make an impact in the industry.
-                        </p>
-                        <a href="src/JoshuaSilvaResume.pdf">View My Resume!</a>
-                    </div>
-                    
-                </div>
-
-                <div class="content" id="contact">
-                    <h1>(512) 659-8471</h1>
-                    <div id="socials">
-                        <a href="https://github.com/joshuasilva414" target="_blank"><img src="src/github.png" /></a>
-                        <a href="https://www.linkedin.com/in/joshua-silva-69ba74204/" target="_blank"><img src="src/linkedin.png" /></a>
-                    </div>
-                    <h1><a href="mailto:joshuasilva414@gmail.com">Joshuasilva414@gmail.com</a></h1>
-                </div>
-
-                <div class="content carousel" id="portfolio">
-                    <div class="active slide">
-                        <div><img src="src/project1example1.png"></div>
-                        <h2>This is a website demonstration of a machine learning model that can classify handwritten digits</h2>
-                        <a href="https://joshuasilva414.github.io/digit-classification-app/index.html" target="_blank">Check it out!</a>
-                    </div>
-
-                    <div class="slide">
-                        <div><img src="src/rowdycreators.png"></div>
-                        <h2>This is the Rowdy Creators website which I manage as Rowdy Creator's CTO</h2>
-                        <a href="https://www.rowdycreators.org/" target="_blank">Check it out!</a>
-                    </div>
-
-                    <div class="slide">
-                        <div><img src="src/premier-wellness.png"></div>
-                        <h2>This website for Premier Innovation Studio was my first ever freelance job</h2>
-                        <a href="https://premierwellness-studio.netlify.app" target="_blank">Check it out!</a>
-                    </div>
-
-                    <div class="slide">
-                        <div><img class="invert" src="src/under-construction.png"></div>
-                        <h2>Under Construction</h2>
-                    </div>
-
-                    <!-- Buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+	<link rel="stylesheet" type="text/css" href="ham.css" />
+    <link rel="stylesheet" type="text/css" href="carousel.css" />
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+    href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+    /> -->
+    <title>Joshua Silva | Portfolio</title>
+  </head>
+  <body>
+	<aside>
+		<nav>
+			<ol>
+			<li class="nav-link"><a href="#skills">Skills</a></li>
+			<li class="nav-link"><a href="#projects">Projects</a></li>
+			<li class="nav-link"><a href="#contact">Contact</a></li>
+			<li class="nav-link">
+				<a href="./src/JoshuaSilvaResume.pdf">Resume</a>
+			</li>
+			</ol>
+		</nav>
+	</aside>
+    <header>
+      <nav>
+        <ol>
+          <li class="nav-link"><a href="#skills">Skills</a></li>
+          <li class="nav-link"><a href="#projects">Projects</a></li>
+          <li class="nav-link"><a href="#contact">Contact</a></li>
+          <li class="nav-link">
+            <a href="./src/JoshuaSilvaResume.pdf">Resume</a>
+          </li>
+        </ol>
+		<div class="nav-ham">
+			<button
+						class="menu"
+						aria-label="Main Menu"
+					>
+						<svg width="50" height="50" viewBox="0 0 100 100">
+							<path
+								class="line line1"
+								d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+							/>
+							<path class="line line2" d="M 20,50 H 80" />
+							<path
+								class="line line3"
+								d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+							/>
+						</svg>
+					</button>
+		</div>
+      </nav>
+    </header>
+	<div class="side-info" orientation="left">
+		<div class="vr"></div>
+		<a href="https://github.com/joshuasilva414" target="_blank"
+            ><img src="src/github.png"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/joshuasilva414/"
+            target="_blank"
+            ><img src="src/linkedin.png"
+          /></a>
+	</div>
+	<div class="side-info" orientation="right">
+		<div class="vr"></div>
+		<a href="mailto:joshuasilva414@gmail.com"><h3>joshuasilva414@gmail.com</h3></a>
+	</div>
+    <main>
+      <section id="intro">
+        <div>
+          <hgroup>
+            <h1 class="title-heading">Joshua Silva</h1>
+            <h2 id="job-description">Computer Scientist</h2>
+          </hgroup>
+          <p>
+            Hello! I'm Joshua Silva, a freshman computer science student at
+            UTSA. I'm passionate about technology and solving complex problems
+            through programming. I'm skilled in a wide variety programming
+            languages and technologies. I'm constantly learning and building
+            skills to make better things. I'm currently looking for summer
+            internship related to computer science. Let's make a positive impact
+            together.
+          </p>
         </div>
-    </div>
-    <script src="tabs.js"></script>
+      </section>
+      <hr />
+      <section id="skills">
+        <h1 class="heading">Skills</h1>
+        <div>
+          <h2 class="skill-group-title">Web Development</h2>
+          <!-- Make Links?-->
+          <div class="icon-group">
+            <div class="skill">
+              <img src="./src/html.png" alt="html" />
+              <div class="skill-inside" rating="4">
+                <h2>HTML</h2>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src="./src/css.png" alt="css" />
+              <div class="skill-inside" rating="4">
+                <h2>CSS</h2>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src="./src/js.png" alt="html" />
+              <div class="skill-inside" rating="3">
+                <h2>Javascript</h2>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src="./src/ts.png" alt="html" />
+              <div class="skill-inside" rating="2">
+                <h2>Typscript</h2>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src="./src/tailwind.webp" alt="html" />
+              <div class="skill-inside" rating="4">
+                <h2>Tailwindcss</h2>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src="./src/react.png" alt="html" />
+              <div class="skill-inside" rating="3">
+                <h2>Reactjs</h2>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src="./src/nextjs.png" alt="html" />
+              <div class="skill-inside" rating="3">
+                <h2>Nextjs</h2>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src="./src/prisma.svg" alt="html" />
+              <div class="skill-inside" rating="2">
+                <h2>Prisma</h2>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src="./src/trpc.png" alt="html" />
+              <div class="skill-inside" rating="1">
+                <h2>tRPC</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="skill-group-title">Programming Languages</h2>
+          <!-- Make Links?-->
+          <div class="icon-group">
+            <div class="skill">
+              <img src="./src/python.webp" alt="html" />
+              <div class="skill-inside" rating="4">
+                <h2>Python</h2>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src="./src/c.svg" alt="css" />
+              <div class="skill-inside" rating="4">
+                <h2>C</h2>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src="./src/rust.png" alt="html" />
+              <div class="skill-inside" rating="2">
+                <h2>Rust</h2>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src="./src/java.png" alt="html" />
+              <div class="skill-inside" rating="3">
+                <h2>Java</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section id="projects">
+        <h1 class="heading">Projects</h1>
+        <img
+          width="100%"
+          src="https://grass-graph.appspot.com/images/joshuasilva414.png"
+        />
+        <!-- <div class="calendar"></div> -->
+        <div class="content carousel" id="portfolio">
+          <div class="active slide">
+            <div><img src="src/project1example1.png" /></div>
+            <p>
+              This is a website demonstration of a machine learning model that
+              can classify handwritten digits
+            </p>
+            <a
+              href="https://joshuasilva414.github.io/digit-classification-app/index.html"
+              target="_blank"
+              >Check it out!</a
+            >
+          </div>
+
+          <div class="slide">
+            <div><img src="src/rowdycreators.png" /></div>
+            <p>
+              This is the Rowdy Creators website which I manage as Rowdy
+              Creator's CTO
+            </p>
+            <a href="https://www.rowdycreators.org/" target="_blank"
+              >Check it out!</a
+            >
+          </div>
+
+          <div class="slide">
+            <div><img src="src/premier-wellness.png" /></div>
+            <p>
+              This website for Premier Innovation Studio was my first ever
+              freelance job
+            </p>
+            <a href="https://premierwellness-studio.netlify.app" target="_blank"
+              >Check it out!</a
+            >
+          </div>
+
+          <div class="slide">
+            <div><img class="invert" src="src/under-construction.png" /></div>
+            <p>Under Construction</p>
+          </div>
+
+          <!-- Buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </section>
+      <hr />
+      <section id="contact">
+        <h1 class="heading">Contact</h1>
+        <div class="contact icon-group">
+          <a href="https://github.com/joshuasilva414" target="_blank"
+            ><img src="src/github.png"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/joshuasilva414/"
+            target="_blank"
+            ><img src="src/linkedin.png"
+          /></a>
+        </div>
+		<a href="mailto:joshuasilva414@gmail.com"><h3>joshuasilva414@gmail.com</h3></a>
+      </section>
+    </main>
+    <footer>
+		<h4 style="background: var(--bg-main) 55%; font-family: var(--font-serif); text-align: center;">
+			I developed this portfolio site in 13 hours almost entire from scratch! You know how to contact me!
+		</h4>
+	</footer>
+    <script src="main.js"></script>
+    <!-- <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script> -->
     <script src="carousel.js"></script>
-    <a style="display:none" href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Freepik - Flaticon</a>
-    <a style="display:none" href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Freepik - Flaticon</a>
-    <a style="display:none" href="https://www.flaticon.com/free-icons/under-construction" title="under construction icons">Under construction icons created by monkik - Flaticon</a>
-</body>
+  </body>
 </html>
