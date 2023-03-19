@@ -315,9 +315,3 @@ ol li::marker {
 		--side-p: 2rem;
 	}
 }
-
-@media (min-width: 1600px) {
-	body {
-		background-size: cover;
-	}
-}
